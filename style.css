@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+}
+
+.main{
+    display: flex;
+    border: 2px solid;
+    height: 100vh;
+}
+.left-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 150px;
+}
+.main img{
+    width: 80%; 
+    border: 5px solid rgb(11, 170, 233);
+}
+
+.right-side{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 100px;
+}
+
+.banner-title{
+    position: relative;
+    color: transparent;
+    font-size: 4em;
+    white-space: nowrap;
+}
+
+.banner-title::before{
+    content: 'Programming Hero';
+    position: absolute;
+    color: rgb(68, 185, 231);
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    animation: typing 4s linear 0s infinite ;
+}
+
+@keyframes typing {
+    0%{
+        content:'P|';
+    }
+    4%{
+        content:'Pr|';
+    }
+    8%{
+        content:'Pro|';
+    }
+    12%{
+        content:'Prog|';
+    }
+    16%{
+        content:'Progr|';
+    }
+    20%{
+        content:'Progra|';
+    }
+    24%{
+        content:'Program|';
+    }
+    28%{
+        content:'Programm|';
+    }
+    32%{
+        content:'Programmi|';
+    }
+    36%{
+        content:'Programmin|';
+    }
+    40%{
+        content:'Programming|';
+    }
+    44%{
+        content:'Programming |';
+    }
+    48%{
+        content:'Programming H|';
+    }
+    52%{
+        content:'Programming He|';
+    }
+    56%{
+        content:'Programming Her|';
+    }
+    60%{
+        content:'Programming Hero|';
+    }
+    64%,
+    84%{
+        content:'Programming Hero|';
+    }
+    85%{
+        content:'Programming Her|';
+    }
+    86%{
+        content:'Programming He|';
+    }
+    87%{
+        content:'Programming H|';
+    }
+    88%{
+        content:'Programming |';
+    }
+    89%{
+        content:'Programmin|';
+    }
+    90%{
+        content:'Programmi|';
+    }
+    91%{
+        content:'Programm|';
+    }
+    92%{
+        content:'Program|';
+    }
+    93%{
+        content:'Progra|';
+    }
+    94%{
+        content:'Progr|';
+    }
+    95%{
+        content:'Prog|';
+    }
+    96%{
+        content:'Pro|';
+    }
+    97%{
+        content:'Pr|';
+    }
+    98%{
+        content:'P|';
+    }
+    
+    99%,100%{
+        content:'|';
+    }
+   
+}
+
+.banner-text{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 1.5;
+    color: white;
+    font-size: 1.1em;
+}
+.love-button{
+    padding: 10px 30px;
+    font-size: 1.1em;
+    background-color: rgb(12, 169, 231);
+    border-color: transparent;
+    border:5px solid rgb(12, 169, 231) ;
+    color: white;
+    box-shadow: 10px 10px 10px black;
+    transition: all 0.3s linear ;
+}
+.love-button:hover{
+    background-color: transparent;
+    border:5px solid steelblue;
+    cursor: pointer;  
+}
+.gallery-title{   
+    color: rgb(17, 160, 216);
+    font-size: 3em;
+    text-align: center;
+}
+.image-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 100px;
+    
+}
+
+.image-gallery h3{
+    font-size: 1.5em;
+    color: white;
+}
+
+.image-gallery p{
+    font-size: 1.2em;
+    color: white;
+    position: relative;
+}
+
+
+.image-gallery img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-frame{  
+    margin:10px ;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    
+}
+.image-frame::before{  
+    position: absolute;
+    background-color: transparent;
+    content: "";
+    height: 100%;
+    width: 100%;
+    transition:.5s linear ;
+}
+.image-frame:hover::before{   
+    background-color: rgba(0, 0, 0, 0.575);
+}
+.person-description{
+    position: absolute;
+    top: 150%;
+    left: 10%;
+    transition: .7s linear;
+}
+.image-frame:hover .person-description{  
+    top: 70%;
+}
+.border{
+   background-color: rgb(243, 3, 3);
+   position: absolute;
+   transition: .6s linear;
+}
+.border.left,
+.border.right{
+    width: 4px;
+    height: 390px;
+}
+.border.top,
+.border.bottom{
+    width: 290px;
+    height: 4px;
+}
+.border.left{
+    left: 5px;
+    top: 100%;
+}
+.border.right{
+    right: 5px;
+    bottom: 100%;
+}
+.border.top{
+    top: 5px; 
+    left: 100%; 
+}
+.border.bottom{
+    bottom: 5px; 
+    right: 100%; 
+}
+.image-frame:hover .border.left{  
+    top:5px ;
+}
+.image-frame:hover .border.right{  
+    bottom:5px ;
+}
+.image-frame:hover .border.top{  
+    left:5px ;
+}
+.image-frame:hover .border.bottom{  
+    right:5px ;
+}
